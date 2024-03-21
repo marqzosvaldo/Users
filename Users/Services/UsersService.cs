@@ -24,7 +24,6 @@ namespace Users.Services {
 
 
 
-
         public async Task<IEnumerable<User>> GetUsers() {
             HttpRequestMessage message = new HttpRequestMessage(HttpMethod.Get, Url);
 

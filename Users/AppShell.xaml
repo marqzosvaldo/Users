@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Shell
     x:Class="Users.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -7,10 +7,15 @@
     xmlns:pages="clr-namespace:Users.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="Users">
-
+     <ShellContent
+        Title="Dispositivos"
+        ContentTemplate="{DataTemplate pages:DevicesPage}"
+        Route="dispositivos" />
     <ShellContent
         Title="Usuarios"
         ContentTemplate="{DataTemplate pages:UsersPage}"
         Route="users" />
+
+    
 
 </Shell>

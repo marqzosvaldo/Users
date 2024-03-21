@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Users.Views.AddDevicePage"
+             Title="AddDevicePage">
+     <VerticalStackLayout>
+        <Entry Placeholder="Nombre"
+               x:Name="xentryname"/>
+
+
+        <Button Text="Guardar"
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>
