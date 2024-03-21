@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Users.Views.UsersPage"
+             Title="Usuarios"
+             BackgroundColor="#F1F1F1">
+    <RefreshView x:Name="xrefresh" Refreshing="RefreshView_Refreshing">
+        <Grid RowDefinitions="80,*">
+
+            <HorizontalStackLayout Grid.Row="0" 
+                           HorizontalOptions="End">
+                <Button Text="Agregar Usuario" 
+                Clicked="Button_Clicked"
+                Margin="10,0"
+                HorizontalOptions="End"
+                VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+
+            <CollectionView Grid.Row="1"
+                    SelectionMode="Single"
+                    SelectionChanged="xuserscview_SelectionChanged"
+                    x:Name="xuserscview">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Border StrokeShape="RoundRectangle 12" 
+                            Stroke="White"
+                            Margin="4"
+                            BackgroundColor="White"
+                            HeightRequest="80">
+                                <Label Text="{Binding name}"
+                               Margin="10,0"
+                               FontAttributes="Bold"
+                               VerticalOptions="Center" />
+
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </Grid>
+    </RefreshView>
+    
+</ContentPage>
